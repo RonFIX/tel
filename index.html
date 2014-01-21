@@ -16,12 +16,18 @@
     <title>Tel by RonFIX</title>
   </head>
   <body>
-    <center>
     <div class="jumbotron">
   <h1>Hello, world!</h1>
   <p>1+1=...</p>
   <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
 </div>
-</center>
+<div ng-app>
+  <div>
+    <label>Name:</label>
+    <input type="text" ng-model="yourName" placeholder="Enter a name here">
+    <hr>
+    <h1>Hello {{yourName}}!</h1>
+  </div>
+</div>
   </body>
 </html>

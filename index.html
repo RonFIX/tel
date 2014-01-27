@@ -17,14 +17,17 @@
 var auth = new FirebaseSimpleLogin(messagesRef, function(error, user) {
   if (error) {
     // an error occurred while attempting login
-    console.log(error);
+    alert(error);
   } else if (user) {
     // user authenticated with Firebase
-    console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+    alert('User ID: ' + user.id + ', Provider: ' + user.provider);
   } else {
     // user is logged out
   }
 });
+
+// attempt to log the user in with your preferred authentication provider
+auth.login('<provider>');
 
   // When the user presses enter on the message input, write the message to firebase.
   $('#messageInput').keypress(function (e) {

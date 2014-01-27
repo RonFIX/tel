@@ -12,8 +12,8 @@
 
   // Get a reference to the root of the chat data.
   var messagesRef = new Firebase('https://angularfireup.firebaseio.com/');
-  var chatRef = messagesRef; 
-  var auth = new FirebaseSimpleLogin(chatRef, function(error, user) {
+  //var chatRef = messagesRef; 
+  var auth = new FirebaseSimpleLogin(messagesRef, function(error, user) {
     if (error) {
       // an error occurred while attempting login
       console.log(error);

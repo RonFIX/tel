@@ -17,6 +17,11 @@
   var auth = new FirebaseSimpleLogin(messagesRef, function(error, user) {
   if (error) {
   // an error occurred while attempting login
+      // an error occurred while attempting login
+      switch(error.code) {
+      case 'INVALID_EMAIL':
+      case 'INVALID_PASSWORD':
+      default:
     alert(error);
   } else if (user) {
     // user authenticated with Firebase

@@ -27,7 +27,7 @@ var auth = new FirebaseSimpleLogin(messagesRef, function(error, user) {
 });
 
 // attempt to log the user in with your preferred authentication provider
-auth.login('<provider>');
+auth.login('github');
 
   // When the user presses enter on the message input, write the message to firebase.
   $('#messageInput').keypress(function (e) {

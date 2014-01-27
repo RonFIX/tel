@@ -14,16 +14,16 @@
 
   // Get a reference to the root of the chat data.
   var messagesRef = new Firebase('https://angularfireup.firebaseio.com/');
-var auth = new FirebaseSimpleLogin(messagesRef, function(error, user) {
-  //if (error) {
-    // an error occurred while attempting login
-  //  alert(error);
-  //} else if (user) {
+  var auth = new FirebaseSimpleLogin(messagesRef, function(error, user) {
+  if (error) {
+  // an error occurred while attempting login
+    alert(error);
+  } else if (user) {
     // user authenticated with Firebase
     alert('User ID: ' + user.id + ', Provider: ' + user.provider);
-  //} else {
+  } else {
     // user is logged out
- // }
+  }
 });
 
 // attempt to log the user in with your preferred authentication provider

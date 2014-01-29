@@ -31,8 +31,11 @@
 });
 
 // attempt to log the user in with your preferred authentication provider
-auth.login('github');
-
+//auth.login('github');
+auth.login('github', {
+  rememberMe: false,
+  scope: 'user'
+});
   // When the user presses enter on the message input, write the message to firebase.
   $('#messageInput').keypress(function (e) {
     if (e.keyCode == 13) {
